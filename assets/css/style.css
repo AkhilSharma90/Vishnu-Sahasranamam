@@ -1,0 +1,536 @@
+/* =========================================================
+   Sri Vishnu Sahasranamam — celestial / cosmic theme
+   ========================================================= */
+
+:root{
+  /* deep space */
+  --void:#04060f;
+  --space:#070a1c;
+  --space-2:#0a0f2a;
+  --indigo:#0f1640;
+  --peacock:#16315f;
+  --peacock-2:#234a86;
+  --blue-glow:#4a82c8;
+
+  /* gold */
+  --gold:#e8be63;
+  --gold-bright:#ffe9a8;
+  --gold-deep:#b8862f;
+  --gold-line:#caa24e;
+
+  /* lotus + accents */
+  --lotus:#f0a8bf;
+  --lotus-deep:#d06f93;
+
+  /* ink */
+  --ivory:#f5ecd6;
+  --parch:#e7dcc0;
+  --muted:#b6ac93;
+  --muted-2:#7d769a;
+
+  --serif:"Cormorant Garamond", Georgia, serif;
+  --serif-2:"EB Garamond", Georgia, serif;
+  --display:"Cinzel", serif;
+  --marcellus:"Marcellus", serif;
+
+  --read-scale:1;
+  --maxw:760px;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+
+body{
+  margin:0;
+  background:
+    radial-gradient(1200px 800px at 50% -10%, #122052 0%, transparent 55%),
+    radial-gradient(900px 700px at 85% 12%, #1a2b63 0%, transparent 50%),
+    radial-gradient(1000px 900px at 10% 30%, #131a4a 0%, transparent 55%),
+    linear-gradient(180deg, var(--space) 0%, var(--void) 40%, #05030d 100%);
+  background-attachment:fixed;
+  color:var(--ivory);
+  font-family:var(--serif-2);
+  font-size:calc(18px * var(--read-scale));
+  line-height:1.7;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* faint nebula grain overlay */
+body::after{
+  content:"";
+  position:fixed; inset:0; z-index:1; pointer-events:none;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,.5), transparent),
+    radial-gradient(1px 1px at 70% 60%, rgba(255,255,255,.35), transparent),
+    radial-gradient(1px 1px at 40% 80%, rgba(255,235,180,.4), transparent),
+    radial-gradient(1px 1px at 85% 25%, rgba(255,255,255,.3), transparent),
+    radial-gradient(1.5px 1.5px at 55% 15%, rgba(180,210,255,.4), transparent);
+  background-size:300px 300px, 250px 250px, 400px 400px, 220px 220px, 500px 500px;
+  opacity:.5;
+  mix-blend-mode:screen;
+}
+
+/* ---------- 3D canvas + fallback starfield ---------- */
+#cosmos{
+  position:fixed; inset:0; z-index:0;
+  width:100%; height:100%; display:block;
+  pointer-events:none;
+}
+#starfield-fallback{
+  position:fixed; inset:0; z-index:0; pointer-events:none;
+  background:
+    radial-gradient(2px 2px at 15% 20%, rgba(255,255,255,.9), transparent),
+    radial-gradient(1px 1px at 35% 70%, rgba(255,255,255,.7), transparent),
+    radial-gradient(1.5px 1.5px at 60% 40%, rgba(255,240,200,.8), transparent),
+    radial-gradient(1px 1px at 80% 80%, rgba(200,220,255,.7), transparent),
+    radial-gradient(2px 2px at 90% 15%, rgba(255,255,255,.85), transparent),
+    radial-gradient(1px 1px at 50% 90%, rgba(255,255,255,.6), transparent);
+  background-repeat:repeat;
+  background-size:600px 600px;
+  opacity:.55;
+}
+/* when 3D is live we hide the static fallback */
+body.has-3d #starfield-fallback{opacity:0;}
+
+#scroll-root{position:relative; z-index:2;}
+
+/* ---------- reading progress ---------- */
+#progress-rail{
+  position:fixed; top:0; left:0; right:0; height:3px; z-index:50;
+  background:rgba(255,255,255,.05);
+}
+#progress-bar{
+  height:100%; width:0;
+  background:linear-gradient(90deg, var(--gold-deep), var(--gold-bright), var(--gold));
+  box-shadow:0 0 12px rgba(232,190,99,.8);
+  transition:width .1s linear;
+}
+
+/* ---------- HUD ---------- */
+#hud{
+  position:fixed; right:18px; bottom:20px; z-index:50;
+  display:flex; flex-direction:column; gap:10px;
+}
+.hud-btn{
+  font-family:var(--marcellus);
+  background:rgba(12,18,46,.72);
+  color:var(--gold);
+  border:1px solid rgba(202,162,78,.4);
+  backdrop-filter:blur(8px);
+  border-radius:50%;
+  width:46px; height:46px;
+  font-size:15px; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  transition:.25s; box-shadow:0 4px 18px rgba(0,0,0,.4);
+}
+.hud-btn sup{font-size:.6em;}
+.hud-btn:hover{
+  color:var(--gold-bright);
+  border-color:var(--gold);
+  box-shadow:0 0 18px rgba(232,190,99,.5);
+  transform:translateY(-2px);
+}
+#btn-resume{width:auto; border-radius:24px; padding:0 16px; font-size:13px; letter-spacing:.04em;}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{
+  position:relative;
+  min-height:100svh;
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  text-align:center;
+  padding:6vh 22px 12vh;
+}
+/* soft dark scrim that seats the title over the luminous 3D cosmos */
+.hero-aura{
+  position:absolute; top:40%; left:50%;
+  width:min(92vw,820px); height:min(60vh,500px);
+  transform:translate(-50%,-50%);
+  background:radial-gradient(ellipse at center,
+     rgba(4,6,16,.6) 0%, rgba(4,6,16,.4) 32%, rgba(4,6,16,.12) 56%, transparent 74%);
+  filter:blur(14px);
+  pointer-events:none;
+}
+
+.hero-inner{position:relative; z-index:3; max-width:780px;}
+.hero-om{
+  font-family:var(--serif-2);
+  font-size:clamp(46px,9vw,90px);
+  color:var(--gold-bright);
+  line-height:1;
+  text-shadow:0 0 26px rgba(232,190,99,.7), 0 0 60px rgba(232,190,99,.35);
+  animation:glowpulse 5s ease-in-out infinite;
+}
+@keyframes glowpulse{0%,100%{text-shadow:0 0 22px rgba(232,190,99,.6),0 0 50px rgba(232,190,99,.3)}50%{text-shadow:0 0 34px rgba(255,233,168,.9),0 0 80px rgba(232,190,99,.5)}}
+
+.hero-eyebrow{
+  font-family:var(--marcellus);
+  letter-spacing:.42em; text-transform:uppercase;
+  font-size:clamp(10px,1.6vw,13px);
+  color:var(--muted); margin:22px 0 6px; padding-left:.42em;
+}
+.hero-title{
+  font-family:var(--display);
+  font-weight:600;
+  font-size:clamp(40px,8.2vw,92px);
+  line-height:.98; margin:.1em 0 0;
+  letter-spacing:.02em;
+  color:var(--ivory);
+  text-shadow:0 2px 30px rgba(0,0,0,.6);
+}
+.hero-title span{
+  display:block;
+  background:linear-gradient(180deg,var(--gold-bright),var(--gold) 45%,var(--gold-deep));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+  font-size:.62em; letter-spacing:.08em; margin-top:.06em;
+}
+.hero-sub{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:clamp(16px,2.4vw,22px);
+  color:var(--parch); margin:.9em 0 0; opacity:.92;
+}
+.hero-rule{display:flex; align-items:center; justify-content:center; gap:14px; margin:26px auto 22px; max-width:340px;}
+.hero-rule span{height:1px; flex:1; background:linear-gradient(90deg,transparent,var(--gold-line),transparent);}
+.hero-rule i{color:var(--gold); font-style:normal; font-size:13px; opacity:.8;}
+.hero-verse{
+  font-family:var(--serif);
+  font-size:clamp(16px,2.5vw,21px);
+  color:var(--gold-bright); opacity:.92; line-height:1.85;
+}
+.hero-verse em{font-style:italic;}
+
+.scroll-cue{
+  position:absolute; bottom:30px; left:50%; transform:translateX(-50%);
+  z-index:3; display:flex; flex-direction:column; align-items:center; gap:8px;
+  color:var(--muted); text-decoration:none;
+  font-family:var(--marcellus); letter-spacing:.22em; text-transform:uppercase; font-size:11px;
+  transition:.3s;
+}
+.scroll-cue:hover{color:var(--gold-bright);}
+.scroll-cue svg{animation:bob 2.4s ease-in-out infinite;}
+@keyframes bob{0%,100%{transform:translateY(0);opacity:.6}50%{transform:translateY(7px);opacity:1}}
+
+/* =========================================================
+   SECTIONS / VERSES
+   ========================================================= */
+.section{
+  position:relative;
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:9vh 24px;
+}
+.section-head{text-align:center; margin-bottom:46px;}
+.section-kicker{
+  font-family:var(--marcellus);
+  letter-spacing:.4em; text-transform:uppercase;
+  font-size:12px; color:var(--gold); opacity:.85;
+  padding-left:.4em;
+}
+.section-title{
+  font-family:var(--display); font-weight:500;
+  font-size:clamp(26px,5vw,40px);
+  color:var(--ivory); margin:.3em 0 .2em;
+  letter-spacing:.03em;
+}
+.section-note{
+  font-family:var(--serif); font-style:italic;
+  color:var(--muted); font-size:clamp(15px,2.2vw,18px);
+  max-width:54ch; margin:0 auto;
+}
+
+/* ornament divider */
+.ornament{display:flex; align-items:center; justify-content:center; gap:16px; margin:8px auto 0; max-width:300px;}
+.ornament span{height:1px; flex:1; background:linear-gradient(90deg,transparent,var(--gold-line),transparent);}
+.ornament i{color:var(--gold); font-style:normal; font-size:14px; filter:drop-shadow(0 0 6px rgba(232,190,99,.6));}
+
+/* --- a single shloka --- */
+.shloka{
+  position:relative;
+  margin:0 auto 8px;
+  padding:22px 26px 22px 30px;
+  border-radius:14px;
+  background:linear-gradient(135deg, rgba(20,28,64,.42), rgba(10,15,38,.30));
+  border:1px solid rgba(202,162,78,.14);
+  backdrop-filter:blur(3px);
+  transition:border-color .5s, box-shadow .5s, background .5s;
+}
+.shloka::before{
+  content:"";
+  position:absolute; left:0; top:14px; bottom:14px; width:2px; border-radius:2px;
+  background:linear-gradient(180deg,transparent,var(--gold-line),transparent);
+  opacity:.5; transition:.5s;
+}
+.shloka:hover, .shloka.lit{
+  border-color:rgba(202,162,78,.4);
+  background:linear-gradient(135deg, rgba(28,40,86,.55), rgba(13,19,48,.42));
+  box-shadow:0 8px 40px rgba(4,8,24,.5), 0 0 0 1px rgba(232,190,99,.06) inset;
+}
+.shloka:hover::before, .shloka.lit::before{opacity:1; box-shadow:0 0 12px rgba(232,190,99,.7);}
+
+.shloka .num{
+  position:absolute; right:18px; top:14px;
+  font-family:var(--display); font-size:13px; letter-spacing:.05em;
+  color:var(--gold-deep); opacity:.7;
+}
+.shloka .line{
+  font-family:var(--serif);
+  font-size:1.16em;
+  line-height:1.55;
+  color:var(--ivory);
+}
+.shloka .line.a{ margin-right:34px; }
+.shloka .line.b{ color:var(--parch); }
+.shloka .danda{color:var(--gold); opacity:.55; padding:0 .15em; font-style:normal;}
+
+/* invocation / dhyanam / closing verses — grander */
+.verse-grand{
+  text-align:center;
+  font-family:var(--serif);
+  font-size:clamp(18px,3vw,24px);
+  line-height:1.95;
+  color:var(--gold-bright);
+  margin:0 auto 30px;
+  max-width:62ch;
+  text-shadow:0 0 22px rgba(0,0,0,.5);
+}
+.verse-grand em{font-style:italic; display:block;}
+.verse-grand + .verse-grand{
+  padding-top:26px;
+  border-top:1px solid rgba(202,162,78,.12);
+}
+
+/* =========================================================
+   ART INTERSTITIALS
+   ========================================================= */
+.interstitial{
+  position:relative;
+  margin:7vh auto;
+  max-width:920px;
+  padding:24px;
+  text-align:center;
+}
+.art-frame{
+  position:relative;
+  width:min(74vw,360px);
+  margin:0 auto;
+  filter:drop-shadow(0 0 30px rgba(74,130,200,.25));
+}
+.art-frame svg{width:100%; height:auto; display:block; overflow:visible;}
+.art-caption{
+  margin-top:22px;
+  font-family:var(--marcellus);
+  letter-spacing:.26em; text-transform:uppercase;
+  font-size:12px; color:var(--gold);
+}
+.art-gloss{
+  font-family:var(--serif); font-style:italic;
+  color:var(--muted); font-size:clamp(14px,2vw,17px);
+  max-width:46ch; margin:8px auto 0;
+}
+/* the big reclining-Vishnu panel */
+.interstitial.panel .art-frame{width:min(90vw,720px);}
+
+/* slow rotation for chakra art */
+.spin-slow{transform-origin:center; animation:spin 60s linear infinite;}
+.spin-rev{transform-origin:center; animation:spin 90s linear infinite reverse;}
+@keyframes spin{to{transform:rotate(360deg);}}
+@media (prefers-reduced-motion: reduce){ .spin-slow,.spin-rev{animation:none;} }
+
+/* =========================================================
+   DARSHAN PANELS — framed devotional images
+   ========================================================= */
+.darshan{
+  position:relative;
+  margin:13vh auto;
+  max-width:560px;
+  text-align:center;
+}
+.darshan.wide{max-width:760px;}
+
+.darshan-glow{
+  position:absolute; left:50%; top:42%;
+  width:118%; aspect-ratio:1; transform:translate(-50%,-50%);
+  background:radial-gradient(circle, rgba(232,190,99,.22) 0%, rgba(74,130,200,.16) 40%, transparent 68%);
+  filter:blur(14px); pointer-events:none; z-index:0;
+  opacity:.7; transition:opacity .8s;
+}
+.darshan:hover .darshan-glow{opacity:1;}
+
+.darshan-frame{
+  position:relative; z-index:1;
+  display:inline-block;
+  padding:12px;
+  border-radius:12px;
+  cursor:zoom-in;
+  background:
+    linear-gradient(150deg, rgba(60,46,18,.95), rgba(20,16,42,.92));
+  box-shadow:
+    0 0 0 1px rgba(232,190,99,.55),
+    0 0 0 6px rgba(10,14,34,.6),
+    0 0 0 7px rgba(202,162,78,.35),
+    0 26px 70px rgba(2,4,14,.7);
+  transition:transform .6s cubic-bezier(.16,.84,.36,1), box-shadow .6s;
+  max-width:100%;
+}
+.darshan-frame img{
+  display:block;
+  max-width:100%;
+  max-height:80vh;
+  width:auto; height:auto;
+  border-radius:5px;
+  border:1px solid rgba(202,162,78,.5);
+  box-shadow:inset 0 0 60px rgba(6,8,22,.55);
+  transition:filter .8s ease;
+  filter:saturate(1.02) contrast(1.02);
+}
+.darshan-frame:hover{
+  transform:translateY(-4px);
+  box-shadow:
+    0 0 0 1px rgba(255,233,168,.8),
+    0 0 0 6px rgba(10,14,34,.6),
+    0 0 0 7px rgba(232,190,99,.55),
+    0 30px 90px rgba(2,4,14,.8),
+    0 0 60px rgba(232,190,99,.25);
+}
+/* ornamental gold corners */
+.darshan-frame .corner{
+  position:absolute; width:18px; height:18px; z-index:2;
+  background:
+    linear-gradient(45deg, transparent 46%, var(--gold-bright) 46%, var(--gold-deep) 54%, transparent 54%),
+    linear-gradient(-45deg, transparent 46%, var(--gold-bright) 46%, var(--gold-deep) 54%, transparent 54%);
+  filter:drop-shadow(0 0 4px rgba(232,190,99,.7));
+}
+.darshan-frame .corner.tl{top:3px; left:3px;}
+.darshan-frame .corner.tr{top:3px; right:3px;}
+.darshan-frame .corner.bl{bottom:3px; left:3px;}
+.darshan-frame .corner.br{bottom:3px; right:3px;}
+.zoom-hint{
+  position:absolute; right:14px; bottom:12px; z-index:3;
+  color:var(--gold-bright); font-size:18px;
+  background:rgba(8,12,30,.6); border:1px solid rgba(202,162,78,.5);
+  width:30px; height:30px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  opacity:0; transform:scale(.8); transition:.4s;
+  backdrop-filter:blur(4px);
+}
+.darshan-frame:hover .zoom-hint{opacity:.9; transform:scale(1);}
+
+.darshan figcaption{margin-top:24px; position:relative; z-index:1;}
+.darshan-place{
+  font-family:var(--marcellus);
+  letter-spacing:.34em; text-transform:uppercase;
+  font-size:11px; color:var(--gold); opacity:.85; padding-left:.34em;
+}
+.darshan-name{
+  font-family:var(--display); font-weight:500;
+  font-size:clamp(22px,3.6vw,30px);
+  color:var(--ivory); margin:.18em 0 .12em;
+  text-shadow:0 0 20px rgba(0,0,0,.6);
+}
+.darshan-gloss{
+  font-family:var(--serif); font-style:italic;
+  color:var(--parch); opacity:.92;
+  font-size:clamp(15px,2.2vw,19px); line-height:1.7;
+  max-width:46ch; margin:0 auto;
+}
+/* small gold flourish under caption */
+.darshan figcaption::after{
+  content:"❉"; display:block; color:var(--gold);
+  font-size:13px; opacity:.6; margin-top:14px;
+  filter:drop-shadow(0 0 6px rgba(232,190,99,.5));
+}
+
+/* =========================================================
+   LIGHTBOX
+   ========================================================= */
+.lightbox{
+  position:fixed; inset:0; z-index:100;
+  display:flex; align-items:center; justify-content:center;
+  padding:4vh 4vw;
+  background:rgba(3,5,14,.82);
+  backdrop-filter:blur(10px);
+  opacity:0; transition:opacity .28s ease;
+}
+.lightbox.on{opacity:1;}
+.lb-fig{margin:0; max-width:min(1100px,94vw); text-align:center; transform:scale(.96); transition:transform .3s cubic-bezier(.16,.84,.36,1);}
+.lightbox.on .lb-fig{transform:scale(1);}
+.lb-fig img{
+  max-width:100%; max-height:80vh;
+  border-radius:6px;
+  border:1px solid rgba(202,162,78,.5);
+  box-shadow:0 0 0 7px rgba(20,16,42,.8), 0 0 0 8px rgba(202,162,78,.4), 0 30px 90px rgba(0,0,0,.7);
+}
+.lb-fig figcaption{margin-top:18px; color:var(--parch); font-family:var(--serif);}
+.lb-fig figcaption strong{display:block; font-family:var(--display); color:var(--ivory); font-size:22px; font-weight:500;}
+.lb-fig figcaption span{display:block; font-family:var(--marcellus); letter-spacing:.3em; text-transform:uppercase; font-size:10px; color:var(--gold); margin:6px 0;}
+.lb-fig figcaption em{font-style:italic; opacity:.85; font-size:16px;}
+.lb-close{
+  position:fixed; top:18px; right:22px; z-index:101;
+  background:rgba(12,18,46,.7); color:var(--gold-bright);
+  border:1px solid rgba(202,162,78,.5); border-radius:50%;
+  width:44px; height:44px; font-size:17px; cursor:pointer;
+  transition:.25s;
+}
+.lb-close:hover{border-color:var(--gold); box-shadow:0 0 16px rgba(232,190,99,.5);}
+
+/* =========================================================
+   CREDITS
+   ========================================================= */
+.credits{
+  margin:30px auto 0; max-width:560px; text-align:left;
+  font-family:var(--serif-2); font-size:13px; color:var(--muted-2);
+}
+.credits summary{
+  cursor:pointer; text-align:center; color:var(--muted);
+  font-family:var(--marcellus); letter-spacing:.2em; text-transform:uppercase;
+  font-size:11px; padding:8px; list-style:none;
+}
+.credits summary::-webkit-details-marker{display:none;}
+.credits summary:hover{color:var(--gold);}
+.credits #credits-list{margin-top:14px; line-height:1.7;}
+.credits p{margin:.4em 0;}
+.credits a{color:var(--muted); text-decoration:none; border-bottom:1px dotted rgba(202,162,78,.4);}
+.credits a:hover{color:var(--gold-bright);}
+.credits .lic{color:var(--gold-deep);}
+.credits-note{margin-top:14px !important; font-style:italic; opacity:.8;}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.site-foot{
+  position:relative; z-index:2;
+  text-align:center; padding:10vh 24px 12vh;
+  max-width:640px; margin:0 auto;
+}
+.foot-art{width:120px; margin:0 auto 26px; opacity:.9;}
+.foot-art svg{width:100%; height:auto;}
+.foot-line{
+  font-family:var(--serif); font-size:clamp(20px,4vw,30px);
+  color:var(--gold-bright); letter-spacing:.02em;
+  text-shadow:0 0 24px rgba(232,190,99,.4);
+}
+.foot-meta{font-family:var(--serif-2); color:var(--muted-2); font-size:14px; line-height:1.8; margin-top:18px;}
+
+/* =========================================================
+   REVEAL ANIMATIONS (IntersectionObserver-driven)
+   ========================================================= */
+.reveal{opacity:0; transform:translateY(26px); transition:opacity 1s ease, transform 1s cubic-bezier(.16,.84,.36,1);}
+.reveal.in{opacity:1; transform:none;}
+.reveal.d1{transition-delay:.08s} .reveal.d2{transition-delay:.16s} .reveal.d3{transition-delay:.24s}
+@media (prefers-reduced-motion: reduce){ .reveal{opacity:1; transform:none; transition:none;} }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width:560px){
+  body{font-size:calc(17px * var(--read-scale));}
+  .shloka{padding:18px 18px 18px 22px;}
+  .shloka .line.a{margin-right:24px;}
+  .shloka .num{top:10px; right:12px;}
+  #hud{right:12px; bottom:14px;}
+}

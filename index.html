@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sri Vishnu Sahasranamam · The Thousand Names</title>
+<meta name="description" content="Sri Vishnu Sahasranamam — the thousand names of Lord Vishnu, for daily prayer. A celestial, self-contained shrine." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Marcellus&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' x='5'>%F0%9F%95%89%EF%B8%8F</text></svg>" />
+</head>
+<body>
+
+<!-- reading progress -->
+<div id="progress-rail"><div id="progress-bar"></div></div>
+
+<!-- cosmic 3D canvas (progressive enhancement) -->
+<canvas id="cosmos"></canvas>
+<div id="starfield-fallback" aria-hidden="true"></div>
+
+<!-- floating controls -->
+<nav id="hud" aria-label="Reading controls">
+  <button id="btn-resume" class="hud-btn" title="Resume where you left off" hidden>↻ Resume</button>
+  <button id="btn-font" class="hud-btn" title="Reading size">A<sup>±</sup></button>
+  <button id="btn-top" class="hud-btn" title="Return to the beginning">❂</button>
+</nav>
+
+<main id="scroll-root">
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero" id="hero">
+    <div class="hero-aura"></div>
+    <div class="hero-inner reveal">
+      <div class="hero-om">ॐ</div>
+      <p class="hero-eyebrow">Mahabharata · Anushasana Parva</p>
+      <h1 class="hero-title">Vishnu<span>Sahasranamam</span></h1>
+      <p class="hero-sub">The Thousand Names of the All&#8209;Pervading Lord</p>
+      <div class="hero-rule"><span></span><i>❉</i><span></span></div>
+      <p class="hero-verse">
+        <em>Shuklam&#8209;baradharam vishnum shashivarnam chaturbhujam</em><br/>
+        <em>Prasanna vadanam dhyayet sarva vighnopa&#8209;shantaye</em>
+      </p>
+    </div>
+    <a href="#invocation" class="scroll-cue" aria-label="Begin">
+      <span>begin the prayer</span>
+      <svg viewBox="0 0 24 40" width="22" height="36"><path d="M12 2 v30 M5 25 l7 8 7-8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </header>
+
+  <!-- content injected by app.js -->
+  <div id="liturgy"></div>
+
+  <footer class="site-foot">
+    <div class="foot-art" id="foot-art"></div>
+    <p class="foot-line">॥ Om Namo Bhagavate Vasudevaya ॥</p>
+    <p class="foot-meta">Faithfully transcribed in romanized Sanskrit, as it is traditionally recited.<br/>
+      A self&#8209;contained shrine — yours to keep, never to lose.</p>
+    <details class="credits" id="credits">
+      <summary>Image credits &amp; licences</summary>
+      <div id="credits-list"></div>
+    </details>
+  </footer>
+
+</main>
+
+<!-- darshan lightbox -->
+<div id="lightbox" class="lightbox" hidden>
+  <button class="lb-close" aria-label="Close">✕</button>
+  <figure class="lb-fig">
+    <img id="lb-img" src="" alt="" />
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+</div>
+
+<!-- Three.js is vendored locally so the cosmos works fully offline.
+     It is pure progressive enhancement: the site is complete without it. -->
+<script src="assets/vendor/three.min.js"></script>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/art.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/cosmic.js"></script>
+</body>
+</html>
