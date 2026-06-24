@@ -1,3 +1,5 @@
+/* AUTO-GENERATED from CONTENT.md by tools/build-content.js — do not edit by hand.
+   Edit CONTENT.md and re-run `node tools/build-content.js` instead. */
 window.VISHNU_DATA = {
  "title": "Sri Vishnu Sahasranamam",
  "source": "Vishnu Sahasranama Stotram · Mahabharata, Anushasana Parva",
@@ -5,6 +7,18 @@ window.VISHNU_DATA = {
   {
    "a": "Shuklam-baradharam vishnum shashivarnam chaturbhujam",
    "b": "Prasanna vadanam dhyayet sarva vighnopa-shantaye"
+  },
+  {
+   "a": "Vyasam vasishtha-naptaram shakteh pautram-akalmasham",
+   "b": "Parasharatma-jam vande shuka-tatam tapo-nidhim"
+  },
+  {
+   "a": "Vyasaya vishnu-roopaya vyasa-roopaya vishnave",
+   "b": "Namo vai brahma-nidhaye vasishthaya namo namah"
+  },
+  {
+   "a": "Avikaraya shuddhaya nitya-paramatmane",
+   "b": "Sadaika-roopa-roopaya vishnave sarva-jishnave"
   },
   {
    "a": "Yasya smarana-matrena janma-samsara bandhanat",
@@ -27,6 +41,10 @@ window.VISHNU_DATA = {
   {
    "a": "Megha-shyamam peetha-kauseya-vasam sree-vatsankam kaustubhod-bhasitangam",
    "b": "Punyopetam pundari-kaya-taksham vishnum vande sarva-lokaika-natham"
+  },
+  {
+   "a": "Namah samasta-bhutanam adi-bhutaya bhu-bhrite",
+   "b": "Aneka-roopa-roopaya vishnave prabha-vishnave"
   },
   {
    "a": "Sa-shankha-chakram sa-kireeta-kundalam sa-peetha-vastram saraseeruhekshanam",
@@ -406,165 +424,170 @@ window.VISHNU_DATA = {
   {
    "n": 74,
    "a": "Mano-java steertha-karo vasu-reta vasu-pradah",
-   "b": "Vasu-prado vasu-devo vasur-vasu-mana havih Sadgati satkruti-satta sadbhooti satpa-rayanah | Shoora-seno yadu-shreshthah sanni-vasa suyamunah"
+   "b": "Vasu-prado vasu-devo vasur-vasu-mana havih"
   },
   {
    "n": 75,
+   "a": "Sadgati satkruti-satta sadbhooti satpa-rayanah",
+   "b": "Shoora-seno yadu-shreshthah sanni-vasa suyamunah"
+  },
+  {
+   "n": 76,
    "a": "Bhoota-vaso vasu-devah sarva-sunilayo nalah",
    "b": "Darpaha darpado drupto durdharo thapa-rajitah"
   },
   {
-   "n": 76,
+   "n": 77,
    "a": "Vishva-moortir-maha-moortih deepta-moorti ramoortiman",
    "b": "Aneka-moorti-ravyaktah shata-moorti shatananah"
   },
   {
-   "n": 77,
+   "n": 78,
    "a": "Eko-naika savah kah kim yatta-tpada manuttamam",
    "b": "Loka-bandhu rlokanatho madhavo bhaktavatsalah"
   },
   {
-   "n": 78,
+   "n": 79,
    "a": "Suvarna varno hemango varanga shchhandanangadee",
    "b": "Veeraha vishama shoonyo khritashee rachala shchalah"
   },
   {
-   "n": 79,
+   "n": 80,
    "a": "Amanee manado manyo lokaswamee trilo-kadhrut",
    "b": "Sumedha medhajo dhanyah satyamedha dhara-dharah"
   },
   {
-   "n": 80,
+   "n": 81,
    "a": "Tejo vrusho dyuti-dharah sarvashastra-bhrutam varah",
    "b": "Pragraho nigraho vyagro naikashrungo gada-grajah"
   },
   {
-   "n": 81,
+   "n": 82,
    "a": "Chatur-moorti chatur-bhahu chaturvyoohah chatur-gatih",
    "b": "Chatu-ratma chatur-bhavah chaturveda-videkapat"
   },
   {
-   "n": 82,
+   "n": 83,
    "a": "Sama-varto nivru-ttatma durjayo durati-kramah",
    "b": "Durlabho durgamo durgo dura-vaso dura-riha"
   },
   {
-   "n": 83,
+   "n": 84,
    "a": "Shubhango loka-sarangah sutantu stantuvardhanah",
    "b": "Indra-karma maha-karma kruta-karma krutagamah"
   },
   {
-   "n": 84,
+   "n": 85,
    "a": "Udbhava sundara sundo ratana-nabha sulochanah",
    "b": "Arko vaja-sani shrungi jayantah sarva-vijjay"
   },
   {
-   "n": 85,
+   "n": 86,
    "a": "Suvarna bindu-rakshobhyah sarva-vagee-shvareshvarah",
    "b": "Maha-hrado maha-garto maha-bhooto mahanidhih"
   },
   {
-   "n": 86,
-   "a": "Kumudah kundarah kundah parjnyah pavano nilah Amrutamsho mruta-vapuh sarvagnah sarvatomukhah",
-   "b": ""
-  },
-  {
    "n": 87,
-   "a": "Sulabha suvratah siddhah shatruji chhatrutapanah Nyagro-dhodumbaro shvatthah chanoo-randhru nishoo-danah",
-   "b": ""
+   "a": "Kumudah kundarah kundah parjnyah pavano nilah",
+   "b": "Amrutamsho mruta-vapuh sarvagnah sarva-tomukhah"
   },
   {
    "n": 88,
+   "a": "Sulabha suvratah siddhah shatruji chhatru-tapanah",
+   "b": "Nyagro-dhodumbaro shvatthah chanoo-randhru nishoo-danah"
+  },
+  {
+   "n": 89,
    "a": "Saha-srarchi sapta-jihvah saptai-dha saptavahanah",
    "b": "Amoorti ranagho chintyo bhaya-krudbhayanashanah"
   },
   {
-   "n": 89,
+   "n": 90,
    "a": "Anu rbruha tkrushah sthoolo guna-bhrunnir-gunomahan",
    "b": "Adhruta svadhruta svastyah pragvamsho vamsha vardhanah"
   },
   {
-   "n": 90,
+   "n": 91,
    "a": "Bhara-bhrut kathito yogee yogeeshah sarva kamdah",
    "b": "Ashrama shramanah kshamah suparno vayuvahanah"
   },
   {
-   "n": 91,
+   "n": 92,
    "a": "Dhanur-dharo dhanur-vedo dando damayita damah",
    "b": "Apara-jita sarva-saho niyanta niyamo yamah"
   },
   {
-   "n": 92,
+   "n": 93,
    "a": "Satvavan satvika satyah satyadharma para-yanah",
    "b": "Abhi-prayah priyarhorhah priyakrut preeti-vardhanah"
   },
   {
-   "n": 93,
+   "n": 94,
    "a": "Vihaya-sagati rjyotih suru-chirhutabhugvibhuh",
    "b": "Ravi rvirochana sooryah savita ravi lochanah"
   },
   {
-   "n": 94,
+   "n": 95,
    "a": "Ananta huta-bhugbhokta sukhado naikado grajah",
    "b": "Anirvinna sada-marshee lokadhishthana madbhutah"
   },
   {
-   "n": 95,
+   "n": 96,
    "a": "Sanaa tsana-tana-tamah kapilah kapi-ravyayah",
    "b": "Svastida svasti-krut svasti svastibhuk svastidakshinah"
   },
   {
-   "n": 96,
+   "n": 97,
    "a": "Aroudrah kundalee chakree vikra-myoorjita shasanah",
    "b": "Shabdatiga shabda-sahah shishira sharvareekarah"
   },
   {
-   "n": 97,
+   "n": 98,
    "a": "Akroorah peshalo daksho dakshinah kshaminam varah",
    "b": "Vidvattamo veeta-bhayah punya-shravana keertanah"
   },
   {
-   "n": 98,
+   "n": 99,
    "a": "Uttarano dushkrutiha punyo dussvapna nashanah",
    "b": "Veeraha rakshana santo jeevanah paryavasthitah"
   },
   {
-   "n": 99,
+   "n": 100,
    "a": "Anantha roopo nantha shreeh jitamanyurbhayapahah",
    "b": "Chatu-rasro gabhee-ratma vidisho vyadisho dishah"
   },
   {
-   "n": 100,
+   "n": 101,
    "a": "Anadi rbhoorbhuvo lakshmeeh suveero ruchirangadah",
    "b": "Janano jana janmadih bheemo bheema-parakramah"
   },
   {
-   "n": 101,
+   "n": 102,
    "a": "Adhara nilayo dhata pushpa-hasah praja-garah",
    "b": "Urdhvaga satpa-thacharah pranadah pranavah panah"
   },
   {
-   "n": 102,
+   "n": 103,
    "a": "Pramanam prana nilayah prana-bhrut prana jeevanah",
    "b": "Tattvam tattva videkatma janma mrutyu jaratigah"
   },
   {
-   "n": 103,
+   "n": 104,
    "a": "Bhoorbhuva svasta-rustarah savita prapi-tamahah",
    "b": "Yagno yagna-patir-yajva yagnango yagnavahanah"
   },
   {
-   "n": 104,
+   "n": 105,
    "a": "Yagna-bhrut yagnakru t yagee yagnabhuk yagnasadhanah",
    "b": "Yajna-ntakrut yagna guhyam anna mannada evacha"
   },
   {
-   "n": 105,
+   "n": 106,
    "a": "Atma-yoni svayam jaato vaikhana sama-gayanah",
    "b": "Devakee nandana srashta kshiteeshah papa-nashanah"
   },
   {
-   "n": 106,
+   "n": 107,
    "a": "Shankha-bhrut nandakee chakree sharngadhanva gadadharah",
    "b": "Rathanga-pani rakshobhyah sarva praha-rana-yudhah"
   }
@@ -577,6 +600,10 @@ window.VISHNU_DATA = {
   {
    "a": "Sree-rama rama rameti rame raame mano-rame",
    "b": "Sahasra-nama tat-tulyam rama-nama varaa-nane"
+  },
+  {
+   "a": "Namo'stv anantaya sahasra-murtaye sahasra-pada-akshi-shiroru-bahave",
+   "b": "Sahasra-namne purushaya shashvate sahasra-koti-yuga-dharine namah"
   },
   {
    "a": "Yatra yogeshvarah krishno yatra partho dhanur-dharah",
