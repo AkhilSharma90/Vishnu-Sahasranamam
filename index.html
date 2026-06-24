@@ -76,9 +76,16 @@
   </figure>
 </div>
 
-<!-- Three.js is vendored locally so the cosmos works fully offline.
-     It is pure progressive enhancement: the site is complete without it. -->
+<!-- Three.js + bloom post-processing, vendored locally so the cosmos works
+     fully offline. Pure progressive enhancement: the site is complete without it. -->
 <script src="assets/vendor/three.min.js"></script>
+<script src="assets/vendor/pp/CopyShader.js"></script>
+<script src="assets/vendor/pp/LuminosityHighPassShader.js"></script>
+<script src="assets/vendor/pp/EffectComposer.js"></script>
+<script src="assets/vendor/pp/ShaderPass.js"></script>
+<script src="assets/vendor/pp/MaskPass.js"></script>
+<script src="assets/vendor/pp/RenderPass.js"></script>
+<script src="assets/vendor/pp/UnrealBloomPass.js"></script>
 
 <script src="assets/js/data.js"></script>
 <script src="assets/js/art.js"></script>
