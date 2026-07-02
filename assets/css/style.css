@@ -257,7 +257,7 @@ body.has-3d #starfield-fallback{opacity:0;}
 .viniyoga-prose{
   font-family:var(--serif); font-style:italic;
   color:var(--parch); opacity:.92;
-  font-size:clamp(15px,2.1vw,18px); line-height:1.85;
+  font-size:clamp(17px,2.7vw,22px); line-height:1.9;
   max-width:62ch; margin:0 auto; text-align:center;
   letter-spacing:.01em;
 }
