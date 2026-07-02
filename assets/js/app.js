@@ -16,6 +16,14 @@
     return `<div class="verse-grand reveal d${(i % 3) + 1}">${a}${b}</div>`;
   }
 
+  // ---- a dialogue verse, optionally introduced by its speaker ----
+  function dialogueVerse(v, i) {
+    const head = v.speaker
+      ? `<div class="uvacha reveal">${esc(v.speaker)}</div>`
+      : "";
+    return head + grandVerse(v, i);
+  }
+
   // ---- a single numbered shloka ----
   function shloka(s) {
     return `<div class="shloka reveal" data-n="${s.n}" id="shloka-${s.n}">
@@ -110,6 +118,25 @@
   D.invocation.forEach((v, i) => (html += grandVerse(v, i)));
   html += `</section>`;
 
+  /* ---------- PURVA-BHAGA · the dialogue ---------- */
+  if (D.dialogue && D.dialogue.length) {
+    html += `<section class="section" id="dialogue">`;
+    html += sectionHead("Purva-bhaga · the asking", "Bhishma's Counsel",
+      "Upon his bed of arrows, Bhishma answers Yudhishthira — and gives the thousand names that purify all.");
+    D.dialogue.forEach((v, i) => (html += dialogueVerse(v, i)));
+    html += `</section>`;
+  }
+
+  /* ---------- VINIYOGA · the ritual dedication ---------- */
+  if (D.viniyoga) {
+    html += `<section class="section" id="viniyoga">`;
+    html += sectionHead("Viniyoga · the dedication",
+      "The Seer, the Metre, the Seed",
+      "By whom it was seen, in what metre, with what seed and power it is applied.");
+    html += `<p class="viniyoga-prose reveal">${esc(D.viniyoga)}</p>`;
+    html += `</section>`;
+  }
+
   /* ---------- DHYANAM ---------- */
   html += `<section class="section" id="dhyanam">`;
   html += sectionHead("Dhyanam · the meditation", "He Who Reclines on the Endless",
@@ -150,8 +177,8 @@
   html += interstitial(ART.sun, "Phala", "What the recitation bestows — fearlessness, fortune, and the nearness of the Lord.");
   html += `<section class="section" id="closing">`;
   html += sectionHead("Uttara-bhaga · the sealing", "The Closing Praise",
-    "With these verses the garland is offered, and every act surrendered to Narayana.");
-  D.closing.forEach((v, i) => (html += grandVerse(v, i)));
+    "The fruits of the recitation, the words of the sages, and every act surrendered to Narayana.");
+  D.closing.forEach((v, i) => (html += dialogueVerse(v, i)));
   html += `</section>`;
 
   root.innerHTML = html;

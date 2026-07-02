@@ -67,13 +67,47 @@ function parseVerses(name) {
   return verses;
 }
 
+// parse the Purva-bhaga dialogue: like parseVerses, but a line that begins
+// with "@" sets the speaker (e.g. "@ Bhishma Uvacha") for that verse.
+function parseDialogue(name) {
+  const arr = sections[name] || [];
+  const verses = [];
+  let block = [];
+  const flush = () => {
+    let speaker = "";
+    let ls = block.map((s) => s.trim()).filter((s) => s.length);
+    if (ls.length && ls[0].startsWith("@")) {
+      speaker = ls[0].replace(/^@\s*/, "");
+      ls = ls.slice(1);
+    }
+    ls = ls.filter((s) => !/^\[?\d+[.)\]]?$/.test(s)); // drop "12." labels
+    if (ls.length) verses.push({ speaker, a: ls[0], b: ls[1] || "" });
+    block = [];
+  };
+  for (const l of arr) {
+    if (l.trim() === "") flush();
+    else block.push(l);
+  }
+  flush();
+  return verses;
+}
+
+// the viniyoga is a single prose passage, not verses — join its lines.
+const viniyoga = (sections.viniyoga || [])
+  .map((s) => s.trim())
+  .filter(Boolean)
+  .join(" ")
+  .trim();
+
 const data = {
   title: meta.title || "Sri Vishnu Sahasranamam",
   source: meta.source || "",
   invocation: parseVerses("invocation"),
+  dialogue: parseDialogue("dialogue"),
+  viniyoga,
   dhyanam: parseVerses("dhyanam"),
   shlokas: parseVerses("shlokas").map((v, i) => ({ n: i + 1, a: v.a, b: v.b })),
-  closing: parseVerses("closing"),
+  closing: parseDialogue("closing"),
 };
 
 const banner =
@@ -83,5 +117,7 @@ fs.writeFileSync(OUT, banner + "window.VISHNU_DATA = " + JSON.stringify(data, nu
 
 console.log(
   `synced CONTENT.md -> assets/js/data.js  |  invocation ${data.invocation.length}` +
-  `, dhyanam ${data.dhyanam.length}, shlokas ${data.shlokas.length}, closing ${data.closing.length}`
+  `, dialogue ${data.dialogue.length}, dhyanam ${data.dhyanam.length}` +
+  `, viniyoga ${data.viniyoga ? "yes" : "no"}` +
+  `, shlokas ${data.shlokas.length}, closing ${data.closing.length}`
 );

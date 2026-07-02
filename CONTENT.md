@@ -34,7 +34,78 @@ Vimuchyate namas-tasmai vishnave prabha-vishnave
 
 Om namo vishnave prabha-vishnave
 
+## dialogue
+
+@ Vaishampayana Uvacha
+Shrutva dharman asheshena pavanani cha sarvashah
+Yudhishthirah shantanavam punar evabhya-bhashata
+
+@ Yudhishthira Uvacha
+Kim ekam daivatam loke kim vapy ekam parayanam
+Stuvantah kam kam archantah prapnuyur manavah shubham
+
+Ko dharmah sarva-dharmanam bhavatah paramo matah
+Kim japan muchyate jantuh janma-samsara-bandhanat
+
+@ Bhishma Uvacha
+Jagat-prabhum deva-devam anantam purushottamam
+Stuvan nama-sahasrena purushah satatotthitah
+
+Tam eva charchayan nityam bhaktya purusham avyayam
+Dhyayan stuvan namasyamscha yajamanas tam eva cha
+
+Anadi-nidhanam vishnum sarva-loka-maheshvaram
+Lokadhyaksham stuvan nityam sarva-duhkhatigo bhavet
+
+Brahmanyam sarva-dharmagnam lokanam keerti-vardhanam
+Lokanatham mahad-bhutam sarva-bhuta-bhavodbhavam
+
+Esha me sarva-dharmanam dharmo 'dhikatamo matah
+Yad bhaktya pundari-kaksham stavair archen narah sada
+
+Paramam yo maha-tejah paramam yo maha-tapah
+Paramam yo mahad-brahma paramam yah parayanam
+
+Pavitranam pavitram yo mangalanam cha mangalam
+Daivatam devatanam cha bhutanam yo 'vyayah pita
+
+Yatah sarvani bhutani bhavanty adi-yugagame
+Yasmimscha pralayam yanti punar eva yuga-kshaye
+
+Tasya loka-pradhanasya jagan-nathasya bhupate
+Vishnor nama-sahasram me shrunu papa-bhayapaham
+
+Yani namani gaunani vikhyatani mahatmanah
+Rishibhih parigeetani tani vakshyami bhutaye
+
+Rishir namnam sahasrasya vedavyaso maha-munih
+Chando 'nushtup tatha devo bhagavan devaki-sutah
+
+Amritamshudbhavo bijam shaktir devaki-nandanah
+Trisama hridayam tasya shantyarthe viniyujyate
+
+Vishnum jishnum maha-vishnum prabha-vishnum maheshvaram
+Aneka-rupa-daityantam namami purushottamam
+
+## viniyoga
+
+Asya Sri Vishnor divya-sahasranama-stotra-maha-mantrasya, Sri Vedavyaso bhagavan rishih, anushtup chandah, Sri Maha-vishnuh paramatma Sri Man-narayano devata. Amritamshudbhavo bhanur iti bijam, devaki-nandana srashteti shaktih, udbhavah kshobhano deva iti paramo mantrah, shankha-bhrun-nandaki chakreeti keelakam, sharnga-dhanva gadadhara ity astram, rathanga-pani rakshobhya iti netram, trisama-samaga-sameti kavacham, ananda para-brahmeti yonih, rituh sudarshanah kala iti dig-bandhah, Sri Vishvarupa iti dhyanam, Sri Maha-vishnu-prityarthe Vishnor-divya-sahasranama-jape viniyogah.
+
 ## dhyanam
+
+Kshirodanvat-pradeshe shuchimani-vilasat-saikate mauktikanam
+Malaklupta-asanasthah sphatika-mani-nibhair mauktikair mandita-angah
+
+Shubhrair-abhrair-adabhrair-upari-virachitair mukta-piyusha-varshaih
+Anandi nah puniyad ari-nalina-gada-shankha-panir mukundah
+
+Bhuh padau yasya nabhir viyad asura-anilash chandra-suryau cha netre
+Karnav-ashah shiro dyaur mukham api dahano yasya vasteyam abdhih
+
+Antastham yasya vishvam sura-nara-khaga-go-bhogi-gandharva-daityaih
+Chitram ram-ramyate tam tribhuvana-vapusham vishnum isham namami
+
+Om namo bhagavate vasudevaya
 
 Shantha-karam bhujaga-shayanam padma-naabham suresham
 Vishva-dhaaram gagana-sadrusham megha-varnam shubhangam
@@ -50,8 +121,6 @@ Aneka-roopa-roopaya vishnave prabha-vishnave
 
 Sa-shankha-chakram sa-kireeta-kundalam sa-peetha-vastram saraseeruhekshanam
 Sahaara-vaksha-sthala-shobhi-kaustubham namami vishnum sirasaa chaturbhujam
-
-Om namo bhagavate vasudevaya
 
 ## shlokas
 
@@ -488,14 +557,109 @@ Rathanga-pani rakshobhyah sarva praha-rana-yudhah
 Vana-malee gadee sharngi shankhee chakree cha nandakee
 Sree-mannarayano vishnuh vasudevo-bhi-rakshatu
 
+Iti idam keertaniyasya keshavasya mahatmanah
+Namnam sahasram divyanam asheshena prakeertitam
+
+Ya idam shrunuyan nityam yashchapi parikeertayet
+Nashubham prapnuyat kinchit so'mutreha cha manavah
+
+Vedanta-go brahmanah syat kshatriyo vijayee bhavet
+Vaishyo dhana-samriddhah syat shudrah sukham avapnuyat
+
+Dharmarthi prapnuyad dharmam arthathi chartham apnuyat
+Kamana-vapnuyat kamee prajarthi chapnuyat prajam
+
+Bhaktiman yah sadotthaya shuchis tad-gata-manasah
+Sahasram vasudevasya namnam etat prakeertayet
+
+Yashah prapnoti vipulam jnati-pradhanyam eva cha
+Achalam shriyam apnoti shreyah prapnoty anuttamam
+
+Na bhayam kvachid apnoti veeryam tejashcha vindati
+Bhavaty arogo dyutiman bala-roopa-gunan-vitah
+
+Rogarto muchyate rogad baddho muchyeta bandhanat
+Bhayan muchyeta bheetastu muchyeta apanna apadah
+
+Durgany atitaraty ashu purushah purushottamam
+Stuvan nama-sahasrena nityam bhakti-saman-vitah
+
+Vasudeva-shrayo martyo vasudeva-parayanah
+Sarva-papa-vishuddhatma yati brahma sanatanam
+
+Na vasudeva-bhaktanam ashubham vidyate kvachit
+Janma-mrityu-jara-vyadhi-bhayam naiva upajayate
+
+Imam stavam adheeyanah shraddha-bhakti-saman-vitah
+Yujyeta atma-sukha-kshanti-shree-dhriti-smriti-keertibhih
+
+Na krodho na cha matsaryam na lobho nashubha-matih
+Bhavanti krita-punyanam bhaktanam purushottame
+
+Dyauh sa-chandrarka-nakshatra kham disho bhur-mahodadhih
+Vasudevasya veeryena vidhritani mahatmanah
+
+Sa-surasura-gandharvam sa-yakshoraga-rakshasam
+Jagad-vashe vartate idam krishnasya sa-characharam
+
+Indriyani mano-buddhih satvam tejo-balam dhritih
+Vasudevatmakany ahuh kshetram kshetragna eva cha
+
+Sarvagamanam acharah prathamam parikalpate
+Achara-prabhavo dharmo dharmasya prabhur achyutah
+
+Rishayah pitaro deva maha-bhutani dhatavah
+Jangama-ajangamam chedam jagan-narayanodbhavam
+
+Yogo jnanam tatha sankhyam vidyah shilpadi karma cha
+Vedah shastrani vijnanam etat sarvam janardanat
+
+Eko vishnur mahad-bhutam prithag-bhutany anekashah
+Treen lokan vyapya bhutatma bhunkte vishva-bhug avyayah
+
+Imam stavam bhagavato vishnor vyasena keertitam
+Pathed ya icchet purushah shreyah praptum sukhani cha
+
+Vishveshvaram ajam devam jagatah prabhum avyayam
+Bhajanti ye pushkaraksham na te yanti parabhavam
+
+@ Arjuna Uvacha
+Padma-patra-vishalaksha padma-nabha surottama
+Bhaktanam anuraktanam trata bhava janardana
+
+@ Sri Bhagavan Uvacha
+Yo mam nama-sahasrena stotum icchati pandava
+So'ham ekena shlokena stuta eva na samshayah
+
+@ Vyasa Uvacha
+Vasanad vasudevasya vasitam te jagat-trayam
+Sarva-bhuta-nivaso'si vasudeva namo'stu te
+
+@ Parvati Uvacha
+Kenopayena laghuna vishnor nama-sahasrakam
+Pathyate panditair nityam shrotum icchamy aham prabho
+
+@ Eshwara Uvacha
 Sree-rama rama rameti rame raame mano-rame
 Sahasra-nama tat-tulyam rama-nama varaa-nane
 
+@ Bramha Uvacha
 Namo'stv anantaya sahasra-murtaye sahasra-pada-akshi-shiroru-bahave
 Sahasra-namne purushaya shashvate sahasra-koti-yuga-dharine namah
 
+@ Sanjaya Uvacha
 Yatra yogeshvarah krishno yatra partho dhanur-dharah
 Tatra sreer vijayo bhutih dhruva neetir-matir-mama
+
+@ Sri Bhagavan Uvacha
+Ananyash chinta-yanto mam ye janah paryupasate
+Tesham nitya-abhiyuktanam yoga-kshemam vahamyaham
+
+Paritranaya sadhunam vinashaya cha dushkritam
+Dharma-samsthapanarthaya sambhavami yuge yuge
+
+Artha-vishanna-shithilash cha bheetah ghoreshu cha vyadhi-vartamanah
+Sankeertya narayana-shabda-matram vimukta-duhkhah sukhino bhavanti
 
 Kayena vacha manasendriyair-va buddhyatmana va prakruteh svabhavat
 Karomi yad-yat sakalam parasmai narayanayeti samarpa-yami
